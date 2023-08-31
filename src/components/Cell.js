@@ -1,7 +1,12 @@
-const Cell = ({ id, cell }) => {
-    console.log(cell)
+const Cell = ({ id, cell, setCells }) => {
+    
+    const handleClick = (e) => {
+        console.log(e.target)
+
+    }
+
     return (
-        <div className="square"></div>
+        <div className="square" id={id} onClick={handleClick}></div>
     )
 }
 
