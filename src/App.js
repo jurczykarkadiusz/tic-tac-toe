@@ -6,7 +6,7 @@ const App = () => {
   const [go, setGo] = useState("circle")
   const [winningMessage, setWinningMessage] = useState(null)
 
-  const message = "pora na"
+  const message = "Pora na"
 
   return (
     <div className="app">
@@ -19,7 +19,7 @@ const App = () => {
             setCells={setCells}
           />)}
       </div>
-      <p></p>
+      <p>{message}</p>
     </div>
   )
 }
