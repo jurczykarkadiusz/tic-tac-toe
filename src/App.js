@@ -22,7 +22,7 @@ const App = () => {
 
         if (circleWins) {
           setWinningMessage("Circle Wins!")
-          
+          return
         }
 
           
@@ -32,7 +32,7 @@ const App = () => {
         let crossWins = array.every(cell => cells[cell] === "cross")
         if (crossWins) {
           setWinningMessage("Cross Wins!")
-          
+          return
         }
 
           
@@ -41,7 +41,7 @@ const App = () => {
 
   useEffect(() => {
     checkScore()
-  }, [cells])
+  }, [cells, checkScore])
 
   return (
     <div className="app">
