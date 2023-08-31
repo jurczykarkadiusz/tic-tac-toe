@@ -6,7 +6,7 @@ const App = () => {
   const [go, setGo] = useState("circle")
   const [winningMessage, setWinningMessage] = useState(null)
 
-  const message = "Pora na"
+  const message = "It's " + go + " time"
 
   return (
     <div className="app">
@@ -17,6 +17,8 @@ const App = () => {
             id={index}
             cell={cell}
             setCells={setCells}
+            go={go}
+            setGo={setGo}
           />)}
       </div>
       <p>{message}</p>
