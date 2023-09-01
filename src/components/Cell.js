@@ -1,5 +1,24 @@
 const Cell = ({ id, cell, setCells, go, setGo, cells, winningMessage }) => {
-    
+    const handleClick = (e) => {
+        const firstChild = e.target.firstChild;
+      
+        if (firstChild && !firstChild.classList.contains("circle") && !firstChild.classList.contains("cross")) {
+          if (go === "circle") {
+            firstChild.classList.add("circle");
+            handleCellChange("circle");
+            setGo("cross");
+          }
+          if (go === "cross") {
+            firstChild.classList.add("cross");
+            handleCellChange("cross");
+            setGo("circle");
+          }
+        }
+      };
+      
+
+
+
     const handleClick = (e) => {
         const taken = e.target.firstChild.classList.contains("circle") ||
             e.target.firstChild.classList.contains("cross")
